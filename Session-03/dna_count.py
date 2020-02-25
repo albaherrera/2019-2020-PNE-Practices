@@ -1,4 +1,4 @@
-dna_seq =input("Introduce a DNA sequence:")
+
 counter_a = 0
 counter_c = 0
 counter_g = 0
