@@ -1,6 +1,7 @@
 from seq0 import*
 folder = "../Session-04/"
-filename = "U5"
+filenames = ["U5","ADA","FRAT1","FXN"]
 print("-----| Exercise 3 |------")
-print("Gene U5 ---> Length:")
-print(seq_len(folder+filename)
+for gene_name in filenames:
+    seq = seq_read_fasta(folder+gene_name)
+    print("Gene",gene_name," ---> Length:",seq_len(seq))
