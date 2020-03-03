@@ -15,3 +15,10 @@ def seq_count_base(seq,base):
     return seq.count(base)
 
 def seq_count(seq):
+    dictionary =
+
+def seq_reverse(seq):
+    return seq[::-1]
+
+def seq_complement(seq):
+
