@@ -1,53 +1,71 @@
 import socket
-IP = "212.128.253.155"
-PORT = 8080
 
-#...Step 1: Creating the socket
+# -- Step 1: create the socket
 ls = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-#..Step 2: Bind the socket to the servers IP ad PORT
-ls.bind((IP,PORT))
+# -- Optional: This is for avoiding the problem of Port already in use
+ls.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-#... Step 3: convert into a listening socket
+# Configure the Server's IP and PORT
+PORT = 40974
+IP = "127.0.0.1"
+
+# -- Step 1: create the socket
+ls = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# -- Optional: This is for avoiding the problem of Port already in use
+ls.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+# -- Step 2: Bind the socket to server's IP and PORT
+ls.bind((IP, PORT))
+
+# -- Step 3: Configure the socket for listening
 ls.listen()
 
-print("Server is configured!")
+print("The server is configured!")
+# -- Waits for a client to connect
+print("Waiting for Clients to connect")
+ls.accept()
+
+print("A client has connected to the server!")
 while True:
+    # -- Waits for a client to connect
+    print("Waiting for Clients to connect")
+
     try:
-        # ...Step 4: Wait for clients to connect
         (cs, client_ip_port) = ls.accept()
+
+    # -- Server stopped manually
     except KeyboardInterrupt:
-        print ("Server is done")
+        print("Server stopped by the user")
+
+        # -- Close the listenning socket
         ls.close()
+
+        # -- Exit!
         exit()
+
+    # -- Execute this part if there are no errors
     else:
 
-        # ... Step 5 :Receiving information from the client
+        print("A client has connected to the server!")
 
-        msg_raw = cs.recv(2000)
+        # -- Read the message from the client
+        # -- The received message is in raw bytes
+        msg_raw = cs.recv(2048)
+
+        # -- We decode it for converting it
+        # -- into a human-redeable string
         msg = msg_raw.decode()
-        print(f"Received message:{msg}")
 
-        # ...Step 6: sEnd aresponse message to the client
+        # -- Print the received message
+        print(f"Message received: {msg}")
 
-        response = "Hi, Im a happy server :-)"
+        # -- Send a response message to the client
+        response = "HELLO. I am the Happy Server :-)\n"
+
+        # -- The message has to be encoded into bytes
         cs.send(response.encode())
+
+        # -- Close the data socket
         cs.close()
-
-
-
-
-#...Step 4: Wait for clients to connect
-(cs , client_ip_port) = ls.accept()
-
-#... Step 5 :Receiving information from the client
-
-msg_raw = cs.recv(2000)
-msg = msg_raw.decode()
-print (f"Received message:{msg}")
-
-#...Step 6: sEnd aresponse message to the client
-
-response = "Hi, Im a happy server :-)"
-cs.send(response.encode())
-ls.close()
