@@ -76,4 +76,3 @@ class Seq:
 
 class Gene(Seq):
     pass
-

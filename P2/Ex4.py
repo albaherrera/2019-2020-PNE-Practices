@@ -1,7 +1,6 @@
 from Client0 import Client
-
 PRACTICE = 2
-EXERCISE = 3
+EXERCISE = 4
 
 print(f"-----| Practice {PRACTICE}, Exercise {EXERCISE} |------")
 
@@ -9,10 +8,11 @@ print(f"-----| Practice {PRACTICE}, Exercise {EXERCISE} |------")
 IP = "127.0.0.1"
 PORT = 63342
 
+
 # -- Create a client object
 c = Client(IP, PORT)
 
-# -- Send a message to the server
-print("Sending a message to the server...")
-response = c.talk("Testing!!!")
-print(f"Response: {response}")
+print(c)
+
+c.debug_talk("Message 1---")
+c.debug_talk("Message 2: Testing !!!")
