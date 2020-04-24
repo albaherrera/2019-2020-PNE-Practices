@@ -6,7 +6,7 @@ import socket
 import termcolor
 
 IP = "127.0.0.1"
-PORT = 40974
+PORT = 53223
 FOLDER ="../Session-04/"
 FILENAMES = ["U5","FRAT1","ADA","FXN","RNU6_269P"]
 sequence = ["GTAGCA","ACGTTA","CGTAGG","ATTGTC"]
@@ -124,7 +124,7 @@ while True:
             response = "Try again"
 
         #print the response deppending on the command selected
-        response += '\n'
+        response += "\n"
         print(response)
         cs.send(response.encode())
         cs.close()

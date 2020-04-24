@@ -7,7 +7,7 @@ import termcolor
 
 class Client:
 
-    def ping(self):
+    def ping (self):
         return f"OK!"
 
     def __init__(self, IP, PORT):
