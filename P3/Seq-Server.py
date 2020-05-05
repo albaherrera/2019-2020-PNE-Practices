@@ -1,6 +1,3 @@
-
-from typing import List
-
 from P1.Seq1 import Seq
 import socket
 import termcolor
