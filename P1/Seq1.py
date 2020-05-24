@@ -32,12 +32,9 @@ class Seq:
         return self.strbases.count(base)
 
     def count(self):
-        all_bases = ["A", "C", "T", "G"]
-        count_bases = []
-        for base in all_bases:
-            count_bases.append(self.count_base(base))
-        dictionary = dict(zip(all_bases, count_bases))
-        return dictionary
+        b = {"A": self.count_base("A"),"C": self.count_base("C"),"G": self.count_base("G"),"T": self.count_base("T")}
+        return b
+
 
     def reverse(self):
         if self.strbases == "NULL" or self.strbases == "Invalid sequence":

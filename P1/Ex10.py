@@ -1,4 +1,4 @@
-from Seq1 import Seq
+from P1.Seq1 import Seq
 
 folder = "../Session-04/"
 filenames = ["U5","ADA","FRAT1","FXN","RNU6_269P"]

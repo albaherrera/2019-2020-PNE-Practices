@@ -1,4 +1,4 @@
-from Seq1 import Seq
+from P1.Seq1 import Seq
 
 s0 = Seq()
 s1 = Seq ("ACTGA")
