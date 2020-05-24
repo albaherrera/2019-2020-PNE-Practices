@@ -1,6 +1,8 @@
 import http.client
 import json
+
 import termcolor
+
 from P1.Seq1 import Seq
 
 # dictionary
@@ -67,39 +69,21 @@ print(gene_input)
 termcolor.cprint(f"Description:","green",end=" ")
 print(Description)
 
-
 # Introduce the sequence
 s = Seq(response["seq"])
 s_length = s.len()
-counter_A = s.count_base(all_bases[0])
-counter_C = s.count_base(all_bases[1])
-counter_G = s.count_base(all_bases[2])
-counter_T = s.count_base(all_bases[3])
-per_A = "{:.1f}".format(100 * counter_A / s_length)
-per_C = "{:.1f}".format(100 * counter_C / s_length)
-per_G = "{:.1f}".format(100 * counter_G / s_length)
-per_T = "{:.1f}".format(100 * counter_T / s_length)
-
-# Print the length
-termcolor.cprint(f"Total length:","green",end=" ")
+termcolor.cprint(f"Total length: ", "green", end="")
 print(s_length)
+for b in all_bases:
+    count_b = s.count_base(b)
+    p = round(count_b * (100 / s_length), 1)  # percentage calculation with just 1 decimal
+    termcolor.cprint(f"{b}", "blue", end=" ")
+    print(f"{count_b} {p} %")
 
-termcolor.cprint(f"A","blue",end=" ")
-print(f"{counter_A} {per_A}%")
-termcolor.cprint(f"C","blue",end=" ")
-print(f"{counter_C} {per_C}%")
-termcolor.cprint(f"G","blue",end=" ")
-print(f"{counter_G} {per_G}%")
-termcolor.cprint(f"T","blue",end=" ")
-print(f"{counter_T} {per_T}%")
-
-# For printing the most frequent base
-c = s.count()
-ci = c.items()
-for a, b in ci:
-    while b > counter:
-        frequent_base = a
-        counter = b
-termcolor.cprint(f"Most frequent base:", "green", end=" ")
-print(frequent_base)
+dict = s.count()  # method from P1 to find the most repeated base
+list_dict = list(dict.values())
+maximum = max(list_dict)
+freq_base = all_bases[list_dict.index(maximum)]
+termcolor.cprint("Most frequent base : ", "green", end="")
+print(freq_base)
 
