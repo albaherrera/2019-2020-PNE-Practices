@@ -1,0 +1,195 @@
+Test report
+====================
+
+---> listSpecies endpoint
+
+* TEST 1:
+
+* Input:
+
+http://127.0.0.1:8080/listSpecies?limit=2
+
+* output:
+
+                           <!DOCTYPE html>
+                           <html lang = "en">
+                           <head>
+                           <meta charset = "utf-8" >
+                             <title>Basic Level</title >
+                           </head >
+                           <body style="background-color:lightblue;">
+                           </body>
+                           </html>
+                           <p>The total number of species in the ensembl is : 286 </p><p>The limit you have selected is: 2 </p><p>The name of the species are: </p>* Pig - Rongchang <br><br>* Pika <br><br><p><a href="/">Main page </a></body></html>
+
+* TEST 2:
+
+* Input:
+
+http://localhost:8080/listSpecies?limit=10
+
+* output:
+
+                           <!DOCTYPE html>
+                           <html lang = "en">
+                           <head>
+                           <meta charset = "utf-8" >
+                             <title>Basic Level</title >
+                           </head >
+                           <body style="background-color:lightblue;">
+                           </body>
+                           </html>
+                           <p>The total number of species in the ensembl is : 286 </p><p>The limit you have selected is: 10 </p><p>The name of the species are: </p>* Pig - Rongchang <br><br>* Pika <br><br>* African ostrich <br><br>* Nile tilapia <br><br>* Channel catfish <br><br>* West African mud turtle <br><br>* Channel bull blenny <br><br>* Sooty mangabey <br><br>* Dolphin <br><br>* Naked mole-rat male <br><br><p><a href="/">Main page </a></body></html>
+
+* TEST 3:
+
+* Input:
+
+localhost:8080/listSpecies?limit=2000
+
+* output:
+ <!DOCTYPE html>
+                           <html lang = "en">
+                           <head>
+                           <meta charset = "utf-8" >
+                             <title>Basic Level</title >
+                           </head >
+                           <body style="background-color:lightblue;">
+                           </body>
+                           </html>
+                           <p>The total number of species in the ensembl is : 286 </p><p>The limit you have selected is: 2000 </p><p>The name of the species are: </p>* Mainland tiger snake <br><br>* Chilean tinamou <br><br>* Red fox <br><br>* Sperm whale <br><br>* Great spotted kiwi <br><br>* Pinecone soldierfish <br><br>* Greater bamboo lemur <br><br>* Kakapo <br><br>* Lamprey <br><br>* Gouldian finch <br><br>* Electric eel <br><br>* Okarito brown kiwi <br><br>* Large yellow croaker <br><br>* Channel bull blenny <br><br>* Mouse NZO/HlLtJ <br><br>* Zebrafish <br><br>* Common carp huanghe <br><br>* Mouse A/J <br><br>* Pig - Wuzhishan <br><br>* Horned golden-line barbel <br><br>* Tree Shrew <br><br>* Marmoset <br><br>* Spotted gar <br><br>* Tiger <br><br>* Goat <br><br>* Central bearded dragon <br><br>* Naked mole-rat female <br><br>* American black bear <br><br>* Tetraodon <br><br>* Meerkat <br><br>* Steppe mouse <br><br>* Lyretail cichlid <br><br>* Mangrove rivulus <br><br>* Gorilla <br><br>* Sheep <br><br>* Bicolor damselfish <br><br>* Coelacanth <br><br>* Midas cichlid <br><br>* Ma's night monkey <br><br>* Pachon cavefish <br><br>* Common wombat <br><br>* Blue-ringed sea krait <br><br>* Gilthead seabream <br><br>* Indian peafowl <br><br>* Pig-tailed macaque <br><br>* American beaver <br><br>* Pig - Jinhua <br><br>* Duck <br><br>* Shrew mouse <br><br>* Western mosquitofish <br><br>* Agassiz's desert tortoise <br><br>* Helmeted guineafowl <br><br>* Amazon molly <br><br>* Chinese hamster CHOK1GS <br><br>* Orangutan <br><br>* Olive baboon <br><br>* Orbiculate cardinalfish <br><br>* Zebra mbuna <br><br>* Elephant <br><br>* American mink <br><br>* Guinea Pig <br><br>* Platypus <br><br>* Capuchin <br><br>* Golden-collared manakin <br><br>* Three-toed box turtle <br><br>* Prairie vole <br><br>* Tropical clawed frog <br><br>* Common carp <br><br>* Blue tilapia <br><br>* Flycatcher <br><br>* Pig - Bamei <br><br>* Spoon-billed sandpiper <br><br>* African ostrich <br><br>* Periophthalmus magnuspinnatus <br><br>* Chinese softshell turtle <br><br>* Asiatic black bear <br><br>* Reedfish <br><br>* Tarsier <br><br>* Clown anemonefish <br><br>* Huchen <br><br>* Horse <br><br>* Pig - Landrace <br><br>* Chinese hamster PICR <br><br>* Mouse <br><br>* Mexican tetra <br><br>* Lesser hedgehog tenrec <br><br>* Jewelled blenny <br><br>* Tongue sole <br><br>* Mouse 129S1/SvImJ <br><br>* Leopard <br><br>* Live sharksucker <br><br>* Great Tit <br><br>* Northern pike <br><br>* Yellowtail amberjack <br><br>* Ruff <br><br>* Alpaca <br><br>* Mouse Lemur <br><br>* Ugandan red Colobus <br><br>* Human <br><br>* Mouse BALB/cJ <br><br>* Pig - Rongchang <br><br>* Drill <br><br>* Burton's mouthbrooder <br><br>* Lion <br><br>* Burrowing owl <br><br>* Hyrax <br><br>* Indian glassy fish <br><br>* Gelada <br><br>* Mouse FVB/NJ <br><br>* Budgerigar <br><br>* Japanese medaka HNI <br><br>* Chacoan peccary <br><br>* Pink-footed goose <br><br>* Tiger tail seahorse <br><br>* Mouse CBA/J <br><br>* Turbot <br><br>* Opossum <br><br>* Greater horseshoe bat <br><br>* Paramormyrops kingsleyae <br><br>* Blind barbel <br><br>* Rufous-capped babbler <br><br>* Komodo dragon <br><br>* Saccharomyces cerevisiae <br><br>* Monterrey platyfish <br><br>* Beluga whale <br><br>* Painted turtle <br><br>* Japanese medaka HSOK <br><br>* Mouse NOD/ShiLtJ <br><br>* Angola colobus <br><br>* Golden Hamster <br><br>* Spiny chromis <br><br>* Naked mole-rat male <br><br>* Makobe Island cichlid <br><br>* Dog - Basenji <br><br>* Fugu <br><br>* Golden pheasant <br><br>* Crab-eating macaque <br><br>* Koala <br><br>* Mouse DBA/2J <br><br>* Nile tilapia <br><br>* Ring-necked pheasant <br><br>* Kangaroo rat <br><br>* Megabat <br><br>* Caenorhabditis elegans <br><br>* Alpine marmot <br><br>* Mallard <br><br>* Mouse PWK/PhJ <br><br>* Hybrid - Bos Indicus <br><br>* Mouse C57BL/6NJ <br><br>* Round goby <br><br>* Siamese fighting fish <br><br>* Polar bear <br><br>* Brazilian guinea pig <br><br>* Sooty mangabey <br><br>* Pig - Tibetan <br><br>* Lesser Egyptian jerboa <br><br>* Javanese ricefish <br><br>* Common wall lizard <br><br>* Rabbit <br><br>* Chimpanzee <br><br>* Siberian musk deer <br><br>* Dingo <br><br>* Bolivian squirrel monkey <br><br>* Long-tailed chinchilla <br><br>* Drosophila melanogaster <br><br>* Eastern brown snake <br><br>* Pig - Largewhite <br><br>* Australian saltwater crocodile <br><br>* Anole lizard <br><br>* Shortfin molly <br><br>* Wallaby <br><br>* Atlantic salmon <br><br>* Domestic yak <br><br>* Chinese medaka <br><br>* Rat <br><br>* Sheepshead minnow <br><br>* Bushbaby <br><br>* Eastern happy <br><br>* Blue tit <br><br>* Algerian mouse <br><br>* Pig - Meishan <br><br>* Atlantic herring <br><br>* Japanese quail <br><br>* Dog - Great Dane <br><br>* Little spotted kiwi <br><br>* Canada lynx <br><br>* Swamp eel <br><br>* Platyfish <br><br>* Microbat <br><br>* West African mud turtle <br><br>* Armadillo <br><br>* Greater amberjack <br><br>* Eurasian sparrowhawk <br><br>* Goodes thornscrub tortoise <br><br>* American bison <br><br>* Brown trout <br><br>* Argentine black and white tegu <br><br>* Mouse C3H/HeJ <br><br>* Damara mole rat <br><br>* Cow <br><br>* Macaque <br><br>* Golden-line barbel <br><br>* Japanese medaka HdrR <br><br>* Black snub-nosed monkey <br><br>* Blunt-snouted clingfish <br><br>* Elephant shark <br><br>* Northern American deer mouse <br><br>* Pig USMARC <br><br>* Barramundi perch <br><br>* Common carp german mirror <br><br>* Hedgehog <br><br>* Squirrel <br><br>* Degu <br><br>* Yellow-billed parrot <br><br>* Medium ground-finch <br><br>* Golden eagle <br><br>* Climbing perch <br><br>* Turkey <br><br>* Abingdon island giant tortoise <br><br>* Mouse WSB/EiJ <br><br>* Tasmanian devil <br><br>* Common canary <br><br>* Mummichog <br><br>* Panda <br><br>* Gibbon <br><br>* Zebra finch <br><br>* Goldfish <br><br>* White-throated sparrow <br><br>* Dark-eyed junco <br><br>* Guppy <br><br>* Zig-zag eel <br><br>* Chinese hamster CriGri <br><br>* Upper Galilee mountains blind mole rat <br><br>* Pig <br><br>* Mouse AKR/J <br><br>* Bonobo <br><br>* Dog <br><br>* Ocean sunfish <br><br>* Small tree finch <br><br>* C.savignyi <br><br>* Rainbow trout <br><br>* Mongolian gerbil <br><br>* Chicken <br><br>* Blue-crowned manakin <br><br>* Daurian ground squirrel <br><br>* Wild yak <br><br>* Coquerel's sifaka <br><br>* Vervet-AGM <br><br>* Stickleback <br><br>* Hagfish <br><br>* Ballan wrasse <br><br>* Mouse LP/J <br><br>* Bengalese finch <br><br>* Mouse CAST/EiJ <br><br>* Common snapping turtle <br><br>* Sailfin molly <br><br>* Pig - Hampshire <br><br>* Tuatara <br><br>* Shrew <br><br>* Ryukyu mouse <br><br>* Pig - Pietrain <br><br>* European seabass <br><br>* Swan goose <br><br>* Denticle herring <br><br>* Dolphin <br><br>* Emu <br><br>* Arctic ground squirrel <br><br>* Cod <br><br>* Ferret <br><br>* Common carp hebao red <br><br>* Orange clownfish <br><br>* Silver-eye <br><br>* Golden snub-nosed monkey <br><br>* C.intestinalis <br><br>* Pig - Berkshire <br><br>* Pika <br><br>* Sloth <br><br>* Indian medaka <br><br>* Red-bellied piranha <br><br>* Arabian camel <br><br>* Donkey <br><br>* Asian bonytongue <br><br>* Hybrid - Bos Taurus <br><br>* Chinook salmon <br><br>* Channel catfish <br><br>* Cat <br><br><p><a href="/">Main page </a></body></html>
+
+
+* TEST 4:
+*Input:
+
+localhost:8080/listSpecies?limit=x
+
+*output:
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>ERROR</title>
+</head>
+<body style="background-color: red;">
+    <h1>ERROR</h1>
+    <p>Welcome to the DATA ERROR server</p>
+    <p>If you are here is because the data you have entered does not exist in the ensembl</p>
+    <p>Sorry!</p>
+</body>
+</html>
+
+
+---> karyotype endpoint
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/karyotype?specie=mouse
+
+* output:
+
+ <!DOCTYPE html>
+                <html lang = "en">
+                <head>
+                <meta charset = "utf-8" >
+                  <title>Basic Level</title >
+                </head >
+                <body style="background-color:lightblue;">
+                The names of the chromosomes are:<p> * 1 </p><p> * 2 </p><p> * 3 </p><p> * 4 </p><p> * 5 </p><p> * 6 </p><p> * 7 </p><p> * 8 </p><p> * 9 </p><p> * 10 </p><p> * 11 </p><p> * 12 </p><p> * 13 </p><p> * 14 </p><p> * 15 </p><p> * 16 </p><p> * 17 </p><p> * 18 </p><p> * 19 </p><p> * X </p><p> * Y </p><p> * MT </p><p><a href="/">Main page </a></body></html>
+
+* TEST 2:
+
+*Input:
+
+http://localhost:8080/karyotype?species=human
+
+*output:
+                <!DOCTYPE html>
+                <html lang = "en">
+                <head>
+                <meta charset = "utf-8" >
+                  <title>Basic Level</title >
+                </head >
+                <body style="background-color:lightblue;">
+                The names of the chromosomes are:<p> * 1 </p><p> * 2 </p><p> * 3 </p><p> * 4 </p><p> * 5 </p><p> * 6 </p><p> * 7 </p><p> * 8 </p><p> * 9 </p><p> * 10 </p><p> * 11 </p><p> * 12 </p><p> * 13 </p><p> * 14 </p><p> * 15 </p><p> * 16 </p><p> * 17 </p><p> * 18 </p><p> * 19 </p><p> * 20 </p><p> * 21 </p><p> * 22 </p><p> * X </p><p> * Y </p><p> * MT </p><p><a href="/">Main page </a></body></html>
+
+* TEST 3:
+
+*Input:
+
+localhost:8080/karyotype?species=nothing
+
+*output:
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>ERROR</title>
+</head>
+<body style="background-color: red;">
+    <h1>ERROR</h1>
+    <p>Welcome to the DATA ERROR server</p>
+    <p>If you are here is because the data you have entered does not exist in the ensembl</p>
+    <p>Sorry!</p>
+</body>
+</html>
+---> chromosomeLength endpoint
+
+* TEST 1:
+
+* Input:
+
+http://localhost:8080/chromosomeLength?specie=mouse&chromo=18
+
+* output:
+
+                <!DOCTYPE html>
+                <html lang = "en">
+                <head>
+                <meta charset = "utf-8" >
+                  <title>Basic Level</title >
+                </head >
+                <body style="background-color:lightblue;">
+                <p>The length of the chromosome is: 90702639</p><p><a href="/">Main page </a></body></html>
+
+* TEST 2:
+
+* Input:
+localhost:8080/chromosomeLength?specie=human&chromo=7
+
+*output:
+                <!DOCTYPE html>
+                <html lang = "en">
+                <head>
+                <meta charset = "utf-8" >
+                  <title>Basic Level</title >
+                </head >
+                <body style="background-color:lightblue;">
+                <p>The length of the chromosome is: 159345973</p><p><a href="/">Main page </a></body></html>
+* TEST 3:
+
+* Input:
+
+localhost:8080/chromosomeLength?specie=human&chromo=1222
+
+*output:
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>ERROR</title>
+</head>
+<body style="background-color: red;">
+    <h1>ERROR</h1>
+    <p>Welcome to the DATA ERROR server</p>
+    <p>If you are here is because the data you have entered does not exist in the ensembl</p>
+    <p>Sorry!</p>
+</body>
+</html>
+<p><a href="/">Main page </a></body></html>
