@@ -1,9 +1,12 @@
-from P1.Seq1 import Seq
+# In this practice I have used a PORT different from 8080 because I have problems when using PORT 8080
 import socket
+
 import termcolor
 
+from P1.Seq1 import Seq
+
 IP = "127.0.0.1"
-PORT = 53223
+PORT = 27439
 FOLDER ="../Session-04/"
 FILENAMES = ["U5","FRAT1","ADA","FXN","RNU6_269P"]
 sequence = ["GTAGCA","ACGTTA","CGTAGG","ATTGTC"]
@@ -13,15 +16,15 @@ def ping():
     print(f"OK!")
 
 def get(n):
-    print (f"{sequence[n]}")
+    return sequence[n]
 
 def info(seq):
     s = Seq(seq)
     s_length = s.len()
-    counter_A = s.count_base(all_bases[0])
-    counter_C = s.count_base(all_bases[1])
-    counter_G = s.count_base(all_bases[2])
-    counter_T = s.count_base(all_bases[3])
+    counter_A = s.count_base("A")
+    counter_C = s.count_base("C")
+    counter_G = s.count_base("G")
+    counter_T = s.count_base("T")
     per_A = "{:.1f}".format(100 * counter_A / s_length)
     per_C = "{:.1f}".format(100 * counter_C / s_length)
     per_G = "{:.1f}".format(100 * counter_G / s_length)
