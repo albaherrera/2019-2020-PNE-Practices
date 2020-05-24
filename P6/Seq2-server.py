@@ -1,9 +1,10 @@
 import http.server
 import socketserver
-import termcolor
 from pathlib import Path
-from P1.Seq1 import Seq
 
+import termcolor
+
+from P1.Seq1 import Seq
 
 # Define the Server's port and the folder
 PORT = 8080
@@ -141,22 +142,25 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             if "info" in op:
                 s = Seq(seq)
                 s_length = s.len()
-                counter_A = s.count_base(all_bases[0])
-                counter_C = s.count_base(all_bases[1])
-                counter_G = s.count_base(all_bases[2])
-                counter_T = s.count_base(all_bases[3])
-                per_A = "{:.1f}".format(100 * counter_A / s_length)
-                per_C = "{:.1f}".format(100 * counter_C / s_length)
-                per_G = "{:.1f}".format(100 * counter_G / s_length)
-                per_T = "{:.1f}".format(100 * counter_T / s_length)
+                list1 = []
+                list2 = []
+
+                for b in all_bases:
+
+                    count_b = s.count_base(b)
+                    p = round(count_b * (100 / s_length), 1)  # percentage calculation with just 1 decimal
+                    list1.append(count_b) # list 1: where we put the total bases
+                    list2.append(p) # list2 : where we put the percentage of all the bases
 
 
                 response = f"""
                 Total length: {s_length}
-                <p>A: {counter_A} ({per_A}%)</p>
-                <p>C: {counter_C} ({per_C}%)</p>
-                <p>G: {counter_G} ({per_G}%)</p>
-                <p>T: {counter_T} ({per_T}%)</p>"""
+                <p>A: {list1[0]} ({list2[0]}%)</p>
+                <p>C: {list1[1]} ({list2[1]}%)</p>
+                <p>G: {list1[2]} ({list2[2]}%)</p>
+                <p>G: {list1[3]} ({list2[3]}%)</p>
+                
+                """
 
             elif "comp" in op:
                response = s.complement()
