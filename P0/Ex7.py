@@ -1,4 +1,4 @@
-from seq0 import*
+from P0.seq0 import*
 all_bases = ["A","C","G","T"]
 folder ="../Session-04/"
 filename = "U5"
