@@ -1,8 +1,6 @@
 import socket
+
 import termcolor
-
-
-
 
 
 class Client:
